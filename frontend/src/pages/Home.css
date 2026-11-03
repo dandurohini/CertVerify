@@ -1,0 +1,379 @@
+
+.home-container {
+  min-height: calc(100vh - 76px);
+  background:
+    radial-gradient(circle at 85% 20%, rgba(196, 164, 100, 0.12), transparent 30%),
+    linear-gradient(135deg, #f8f5ef 0%, #f4f1ea 50%, #eee9df 100%);
+  color: #25231f;
+}
+
+.hero-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 90px 40px 70px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+  min-height: 560px;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 15px;
+  border: 1px solid #d6c49b;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.65);
+  color: #856f3f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.hero-badge span {
+  color: #b08d45;
+}
+
+.hero-content h1 {
+  margin: 0;
+  color: #292720;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.7rem, 5vw, 4.6rem);
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+
+.hero-content h1 span {
+  color: #96783c;
+  font-style: italic;
+}
+
+.hero-description {
+  max-width: 590px;
+  margin: 28px 0 0;
+  color: #6c675d;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.home-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 135px;
+  padding: 13px 22px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+}
+
+.btn-primary {
+  background: #2d2b26;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(45, 43, 38, 0.18);
+}
+
+.btn-primary:hover {
+  background: #96783c;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(45, 43, 38, 0.22);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.65);
+  color: #38352e;
+  border: 1px solid #cfc6b5;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  border-color: #96783c;
+  color: #80632d;
+  transform: translateY(-2px);
+}
+
+.trust-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 35px;
+  color: #777166;
+  font-size: 0.82rem;
+}
+
+.trust-points div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.trust-points span {
+  color: #96783c;
+  font-weight: 900;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate-card {
+  position: relative;
+  width: min(100%, 390px);
+  min-height: 360px;
+  padding: 38px;
+  box-sizing: border-box;
+  background:
+    linear-gradient(145deg, #fffdf9, #f7f1e5);
+  border: 1px solid #d9c9a8;
+  box-shadow:
+    0 25px 60px rgba(71, 60, 40, 0.16),
+    inset 0 0 0 7px rgba(255, 255, 255, 0.6);
+  transform: rotate(2deg);
+  transition: transform 0.35s ease;
+}
+
+.certificate-card::before {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  border: 1px solid #d8c59c;
+  pointer-events: none;
+}
+
+.certificate-card:hover {
+  transform: rotate(0deg) translateY(-7px);
+}
+
+.certificate-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.certificate-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  color: #9a7b3e;
+  border: 1px solid #cdbb92;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.verified-label {
+  color: #94763b;
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.certificate-line {
+  position: relative;
+  z-index: 1;
+  width: 60px;
+  height: 2px;
+  background: #b49354;
+  margin: 32px 0 22px;
+}
+
+.certificate-label {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 9px;
+  color: #9b8050;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.certificate-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #302d27;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+.certificate-text {
+  position: relative;
+  z-index: 1;
+  color: #777064;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  margin-top: 14px;
+}
+
+.certificate-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 35px;
+}
+
+.certificate-footer small {
+  display: block;
+  color: #aaa092;
+  font-size: 0.58rem;
+  letter-spacing: 1.5px;
+}
+
+.certificate-footer strong {
+  display: block;
+  margin-top: 5px;
+  color: #4e6b4d;
+  font-size: 0.8rem;
+}
+
+.seal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #b99b61;
+  border-radius: 50%;
+  color: #92743a;
+  font-weight: 800;
+}
+
+.features-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 40px 65px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.feature {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid #ddd5c6;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.feature:hover {
+  background: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(60, 52, 38, 0.08);
+}
+
+.feature-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #eee5d3;
+  color: #96783c;
+  font-size: 1.1rem;
+}
+
+.feature h3 {
+  margin: 0 0 9px;
+  color: #34312b;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15rem;
+}
+
+.feature p {
+  margin: 0;
+  color: #777166;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 850px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 65px 25px 50px;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-links,
+  .trust-points {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    margin-top: 20px;
+  }
+
+  .features-section {
+    grid-template-columns: 1fr;
+    padding: 20px 25px 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-content h1 {
+    font-size: 2.45rem;
+  }
+
+  .home-links {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .trust-points {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .certificate-card {
+    padding: 30px;
+  }
+ 
+/* Register Page Background - Warm Cream */
+.register-page {
+  background-color: #f5f2e9 !important;
+  background-image: none !important;
+}
+
+}

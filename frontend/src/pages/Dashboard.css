@@ -1,0 +1,374 @@
+
+.dashboard {
+  min-height: calc(100vh - 72px);
+  box-sizing: border-box;
+  padding: 45px 5% 70px;
+  background:
+    radial-gradient(circle at 90% 5%, rgba(196, 164, 100, 0.08), transparent 28%),
+    #f6f3ed;
+  color: #302e29;
+}
+
+.dashboard-header {
+  max-width: 1150px;
+  margin: 0 auto 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+}
+
+.dashboard-eyebrow,
+.section-eyebrow {
+  margin: 0 0 8px;
+  color: #9a7b40;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  color: #2e2c27;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 3vw, 2.45rem);
+  font-weight: 600;
+}
+
+.dashboard-subtitle {
+  margin: 9px 0 0;
+  color: #7b756b;
+  font-size: 0.9rem;
+}
+
+.dashboard-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid #d8d0c1;
+  border-radius: 20px;
+  background: #fffdf9;
+  color: #5d6755;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dashboard-badge span {
+  color: #63805b;
+  font-size: 0.65rem;
+}
+
+.summary-cards {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 115px;
+  padding: 22px;
+  box-sizing: border-box;
+  border: 1px solid #dfd8cb;
+  border-radius: 10px;
+  background: #fffdf9;
+  box-shadow: 0 8px 22px rgba(67, 58, 43, 0.045);
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: #b99b61;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(67, 58, 43, 0.09);
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 9px;
+  background: #eee7d9;
+  color: #96783e;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.card p {
+  margin: 0 0 7px;
+  color: #817b70;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.card h3 {
+  margin: 0;
+  color: #2f2d28;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.card.pending::after {
+  background: #c39b46;
+}
+
+.card.pending .card-icon {
+  background: #f3ead5;
+  color: #a77e29;
+}
+
+.card.verified::after {
+  background: #63805b;
+}
+
+.card.verified .card-icon {
+  background: #e3ece0;
+  color: #54704d;
+}
+
+.card.rejected::after {
+  background: #a85b51;
+}
+
+.card.rejected .card-icon {
+  background: #f1e2df;
+  color: #974c43;
+}
+
+.recent-section {
+  max-width: 1150px;
+  margin: 28px auto 0;
+  padding: 28px;
+  box-sizing: border-box;
+  border: 1px solid #dfd8cb;
+  border-radius: 10px;
+  background: #fffdf9;
+  box-shadow: 0 8px 22px rgba(67, 58, 43, 0.04);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.section-heading h3 {
+  margin: 0;
+  color: #35322c;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.certificate-count {
+  padding: 7px 11px;
+  border-radius: 5px;
+  background: #f1eadc;
+  color: #806735;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.certificate-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.certificate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 5px;
+  border-bottom: 1px solid #eee9df;
+}
+
+.certificate-item:last-child {
+  border-bottom: none;
+}
+
+.certificate-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.certificate-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 39px;
+  height: 39px;
+  border-radius: 7px;
+  background: #f0e9dc;
+  color: #96783e;
+  font-size: 0.95rem;
+}
+
+.certificate-info h4 {
+  margin: 0 0 4px;
+  color: #3b3831;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.certificate-info p {
+  margin: 0;
+  color: #918b81;
+  font-size: 0.72rem;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.status span {
+  font-size: 0.48rem;
+}
+
+.status.pending {
+  background: #f5ecd7;
+  color: #92702b;
+}
+
+.status.verified {
+  background: #e5eee1;
+  color: #55704e;
+}
+
+.status.rejected {
+  background: #f3e2df;
+  color: #914e46;
+}
+
+.empty-state {
+  padding: 50px 20px;
+  text-align: center;
+  border: 1px dashed #d8d0c1;
+  border-radius: 8px;
+  background: #faf8f3;
+}
+
+.empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 15px;
+  border: 1px solid #d7c8a9;
+  border-radius: 50%;
+  color: #a08349;
+  font-size: 1.2rem;
+}
+
+.empty-state h4 {
+  margin: 0 0 7px;
+  color: #49453e;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.1rem;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #8b857a;
+  font-size: 0.8rem;
+}
+
+.dashboard-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background: #f6f3ed;
+  color: #7d766b;
+  font-size: 0.85rem;
+}
+
+.loading-spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid #ded6c8;
+  border-top-color: #96783c;
+  border-radius: 50%;
+  animation: dashboardSpin 0.8s linear infinite;
+}
+
+@keyframes dashboardSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .summary-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 30px 18px 50px;
+  }
+
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .recent-section {
+    padding: 20px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .certificate-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .status {
+    margin-left: 53px;
+  }
+}
